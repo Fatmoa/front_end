@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-12">
+      <button type="button" class="btn btn-secondary m-2" style="float: right " (click)="onAdd()">Add Issued</button>
+    </div>
+  </div><hr>
+<table class="table table-striped mt-5">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Item name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Responsive</th>
+      <th scope="col">Role</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of issue_data; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{item.item_name}}</td>
+      <td>{{item.qnty}}</td>
+      <td>{{item.responsive}}</td>
+      <td>{{item.role}}</td>
+      <td>
+        <button mat-raised-button color="primary" (click)="update()"><mat-icon>edit</mat-icon>edit</button>&nbsp;
+        <button mat-raised-button color="warn" (click)="onDelete()"><mat-icon>delete</mat-icon>delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>
+
