@@ -1,7 +1,7 @@
 <app-mat title="Issued Items" subtitle="Add Issue">
 
 
-  <form>
+  <form [formGroup]="issueForm">
     <div class="row">
       <div class="col-md-6">
 
@@ -39,8 +39,8 @@
     </div>
   </form>
   <div class="col-sm-12">
-    <button type="submit" class="btn btn-primary m-1" >Submit</button>&nbsp;
-    <button type="submit" class="btn btn-danger m-1" >Reset</button>
+    <button type="submit" class="btn btn-primary m-1" (click)="onSubmit()">Submit</button>&nbsp;
+    <button type="submit" class="btn btn-danger m-1" (click)="onReset()">Reset</button>
   </div>
 </app-mat>
 

@@ -2,7 +2,7 @@
 <app-mat title="Issued Items" subtitle="Add Issue">
 
 
-  <form >
+  <form [formGroup]="issueEditForm" >
     <div class="row">
       <div class="col-md-6">
 
@@ -39,10 +39,9 @@
       </div>
     </div>
   </form>
-  <!-- <div class="col-sm-12">
+  <div class="col-sm-12">
     <button type="submit" class="btn btn-primary m-1" (click)="onSave()">Submit</button>&nbsp;
-    <button type="submit" class="btn btn-danger m-1" (click)="onReset()">Reset</button>
-  </div> -->
+  </div>
 </app-mat>
 
 

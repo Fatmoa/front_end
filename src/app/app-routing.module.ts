@@ -1,3 +1,4 @@
+import { AddissueComponent } from './pages/Issued/addissue/addissue.component';
 import { ViewitemsComponent } from './pages/Items/viewitems/viewitems.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -27,9 +28,10 @@ const routes: Routes = [
         component:AdditemsComponent,
       },
       {
-        path:"viewitems",
-        component:ViewitemsComponent,
+        path:"addissue",
+        component:AddissueComponent,
       },
+
       {
         path: 'login',
         component:LoginComponent,

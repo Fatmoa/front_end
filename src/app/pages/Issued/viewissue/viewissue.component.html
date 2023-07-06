@@ -1,6 +1,7 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-sm-12">
+      <h2>Issues List</h2>
       <button type="button" class="btn btn-secondary m-2" style="float: right " (click)="onAdd()">Add Issued</button>
     </div>
   </div><hr>
@@ -23,8 +24,8 @@
       <td>{{item.responsive}}</td>
       <td>{{item.role}}</td>
       <td>
-        <button mat-raised-button color="primary" (click)="update()"><mat-icon>edit</mat-icon>edit</button>&nbsp;
-        <button mat-raised-button color="warn" (click)="onDelete()"><mat-icon>delete</mat-icon>delete</button>
+        <button mat-raised-button color="primary" (click)="update(item)"><mat-icon>edit</mat-icon>edit</button>&nbsp;
+        <button mat-raised-button color="warn" (click)="onDelete(item.id)" ><mat-icon>delete</mat-icon>delete</button>
       </td>
     </tr>
   </tbody>

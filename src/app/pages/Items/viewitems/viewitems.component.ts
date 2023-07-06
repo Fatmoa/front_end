@@ -16,14 +16,6 @@ export class ViewitemsComponent{
   ngOnInit(): void {
     this.getAll();
   }
-
-  onDelete(id:any){
-
-    this.itemservice.deleteById(id).subscribe((resp:any)=>{
-      this.ngOnInit();
-    })
-
-  }
   onAdd(){
     this.router.navigateByUrl('/additems')
     }
@@ -31,6 +23,12 @@ export class ViewitemsComponent{
 
   update(item:any){
     this.router.navigateByUrl('edititems/'+ item.id);
+  }
+  onDelete(id:any){
+    this.itemservice.deleteById(id).subscribe((resp:any)=>{
+      this.ngOnInit();
+    })
+
   }
 
 
