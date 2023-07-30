@@ -1,0 +1,7 @@
+.search-bar{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 20px;
+    /* background-color:wheat; */
+}

@@ -15,6 +15,7 @@ export class ViewitemsComponent{
   }
   ngOnInit(): void {
     this.getAll();
+     this.getSum()
   }
   onAdd(){
     this.router.navigateByUrl('/additems')
@@ -30,13 +31,29 @@ export class ViewitemsComponent{
     })
 
   }
+  onClick(event:any){
+    console.log(event.target.value)
+    this.itemservice.getByName(event.target.value).subscribe((resp:any)=>{
+      console.log(resp);
+      this.items_data=resp;
+    })
+
+  }
 
 
   items_data:any
+   qty_count:any
   getAll(){
     this.itemservice.getAll().subscribe((resp:any)=>{
       console.log(resp);
       this.items_data=resp;
+    })
+  }
+
+  getSum(){
+    this.itemservice.getSum().subscribe((resp:any)=>{
+      console.log(resp);
+      this.qty_count=resp;
     })
   }
 }

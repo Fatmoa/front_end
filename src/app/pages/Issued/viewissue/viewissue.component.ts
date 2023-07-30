@@ -23,8 +23,8 @@ export class ViewissueComponent {
 
 onDelete(id:any){
   this.issueService.deleteById(id).subscribe((resp:any)=>{
-    this.getAll()
-
+    console.log(resp);
+    this.ngOnInit()
   })
 
 }
